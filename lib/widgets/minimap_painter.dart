@@ -57,7 +57,7 @@ class MinimapPainter extends CustomPainter {
     );
 
     // Draw labels
-    final textPainter = (String text, double y, {bool top = true}) {
+    void textPainter(String text, double y, {bool top = true}) {
       final tp = TextPainter(
         text: TextSpan(
           text: text,
@@ -74,7 +74,7 @@ class MinimapPainter extends CustomPainter {
         canvas,
         Offset((size.width - tp.width) / 2, y - (top ? 0 : tp.height)),
       );
-    };
+    }
     textPainter('FRONT / COCKPIT', 8, top: true);
     textPainter('BACK / TAIL', size.height - 8, top: false);
 

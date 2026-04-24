@@ -107,17 +107,21 @@ class QuizController {
       if (percentage == 100) return 'Perfect! You\'re a safety expert!';
       if (percentage >= 80) return 'Excellent understanding of flight safety.';
       if (percentage >= 60) return 'Good knowledge. Review the safety tips!';
-      if (percentage >= 40)
+      if (percentage >= 40) {
         return 'Keep learning about aviation safety.';
+      }
       return 'Please review all safety procedures.';
     } else {
       if (percentage == 100) return '¡Perfecto! ¡Eres un experto en seguridad!';
-      if (percentage >= 80)
+      if (percentage >= 80) {
         return 'Excelente comprensión de la seguridad aérea.';
-      if (percentage >= 60)
+      }
+      if (percentage >= 60) {
         return 'Buen conocimiento. ¡Revisa los consejos!';
-      if (percentage >= 40)
+      }
+      if (percentage >= 40) {
         return 'Sigue aprendiendo sobre seguridad aérea.';
+      }
       return 'Por favor, revisa todos los procedimientos.';
     }
   }
